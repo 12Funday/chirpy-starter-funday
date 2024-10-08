@@ -4,5 +4,6 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+> My name is Adi Pandey, currently work and live and Jakarta.
+In this site, I will post tutorial, tips and trick, etc.
+I hope you enjoy your time here.
