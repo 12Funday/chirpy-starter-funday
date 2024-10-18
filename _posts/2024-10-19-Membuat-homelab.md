@@ -13,11 +13,13 @@ Memiliki *homelab server* merupakan kebutuhan bagi orang yang punya rasa penasar
 
 Pada tulisan ini, saya akan menceritakan bagaimana saya membangun *Homelab server* pribadi saya dari nol, dan apa saja yang saya lakukan dengan *homelab* ini.
 
+---
+
 ## Hardware
 
 Adapun perangkat keras yang saya gunakan untuk membangun *homelab server* sederhana saya adalah sebagai berikut.
 
-1. HP ThinClient T620 plus (F5A60AA)
+1. **HP ThinClient T620 plus (F5A60AA)**
 
     Memilih device yang mumpuni untuk kebutuhan *homelab* ini memakan proses yang lumayan panjang, banyak pertimbangan yang harus saya perhatikan dalam memilih perangkat yang saya gunakan. Salah satu yang paling penting adalah budget *(hehe)*. Dan akhrirnya pilihan saya jatuh pada HP ThinClient T620 plus.
 
@@ -34,7 +36,7 @@ Adapun perangkat keras yang saya gunakan untuk membangun *homelab server* sederh
 
     Namun, untuk menjalankan beberapa *virtual machine* secara bersamaan tidak akan mungkin dengan memory hanya 4GB dan Storage 16GB. Untuk itu, saya melakukan upgrade memory 8GB dan storage menjadi 128GB.
 
-2. TPLINK TL-WR840N
+2. **TPLINK TL-WR840N**
     
     Benar! Apa itu *homelab* tanpa koneksi internet?
     Beruntungnya saya, fasilitas koneksi internet telah disediakan oleh penyedia kost dengan kualitas koneksi yang stabil dan *transfer rate* yang lumayan cepat.
@@ -46,7 +48,7 @@ Adapun perangkat keras yang saya gunakan untuk membangun *homelab server* sederh
     <img src="/assets/img/tplink.png" alt="TPLINK TL-WR840N" width="200"/>
 
 
-3. Video Capture
+3. **Video Capture**
 
 
     Monitor! Tentu saja kita perlu alat untuk menampilkan output device yang kita gunakan. Baik dalam proses instalasi maupun ketika menggunakannya sehari-hari nanti. Tapi, karena meja saya sempit dan sehari-hari kerja dengan laptop yang udah ada monitornya. Sepertinya tidak butuh-butuh amat untuk membeli monitor.
@@ -62,27 +64,27 @@ Pemilihan sistem operasi merupakan satu hal yang sangat krusial dalam membangun 
 
 Ada beberapa pilihan sistem operasi yang menjadi pertimbangan saya dalam membanung *homelab* ini.
 
-**1. OS dengan Dekstop Environment**
+1. **OS dengan Dekstop Environment**
 
- <img src="/assets/img/linux-1.png" alt="linux" width="200"/>
+    <img src="/assets/img/linux-1.png" alt="linux" width="200"/>
 
-Menggunakan dekstop environment berbasis linux ataupun windows tentunya akan sangat memudahkan dalam pengoperasian *homelab* ini nanti. Pada dekstop kita gunakan virtualbox untuk menginstal beberapa *virtual machine*. Namun, menggunakan *dekstop environment* saya kira akan sangat boros resorce nantinya. Dalam keadaan *idle* pun penggunaan CPU dan Memory mesin dengan *desktop environment* lumayan gede.
+    Menggunakan dekstop environment berbasis linux ataupun windows tentunya akan sangat memudahkan dalam pengoperasian *homelab* ini nanti. Pada dekstop kita gunakan virtualbox untuk menginstal beberapa *virtual machine*. Namun, menggunakan *dekstop environment* saya kira akan sangat boros resorce nantinya. Dalam keadaan *idle* pun penggunaan CPU dan Memory mesin dengan *desktop environment* lumayan gede.
 
-**2. Casa OS**
+2. **Casa OS**
 
-<img src="/assets/img/casa-1.png" alt="casa OS" width="200"/>
+    <img src="/assets/img/casa-1.png" alt="casa OS" width="200"/>
 
-Casa OS sangat populer digunakan sebagai sistem operasi dalam pembuatan *homelab server* karena pengoperasiaannya sangat mudah, cukup buka browser dan klik klik klik. Namun, kemudahan yang ditawarkan ini sangat berseberangan dengan semangat "utak-atik" yang saya miliki *(hehe)*
+    Casa OS sangat populer digunakan sebagai sistem operasi dalam pembuatan *homelab server* karena pengoperasiaannya sangat mudah, cukup buka browser dan klik klik klik. Namun, kemudahan yang ditawarkan ini sangat berseberangan dengan semangat "utak-atik" yang saya miliki *(hehe)*
 
-**3. Virtualization Platform**
+3. **Virtualization Platform**
 
-Virtualization adalah teknologi yang mampu membuat satu komputer atau server menjalankan beberapa sistem operasi secara berasamaan menggunakan satu mesin fisik yang sama. Salah satu platform yang digunakan untuk virtualization adalah **Proxmox Virtual Environment**
+    Virtualization adalah teknologi yang mampu membuat satu komputer atau server menjalankan beberapa sistem operasi secara berasamaan menggunakan satu mesin fisik yang sama. Salah satu platform yang digunakan untuk virtualization adalah **Proxmox Virtual Environment**
 
-<img src="/assets/img/proxmox-1.png" alt="Proxmox Virtual Environment" width="200"/>
+    <img src="/assets/img/proxmox-1.png" alt="Proxmox Virtual Environment" width="200"/>
 
-**Proxmox** dapat melakukan 2 jenis *virtualization* yaitu *Kernel Based Virtualization* dan *Container-based virtualization*. Proxmox dilengkapi dengan *web-based management interface* sehingga dalam pengoperasiannya bisa sangat mudah melalui browser. Berarti, saya dapat mengoperasikan proxmox melalui HP atau tablet. Konon katanya, proxmox juga ada mobile appsnya yang bisa diinstall melalui playstore.
+    **Proxmox** dapat melakukan 2 jenis *virtualization* yaitu *Kernel Based Virtualization* dan *Container-based virtualization*. Proxmox dilengkapi dengan *web-based management interface* sehingga dalam pengoperasiannya bisa sangat mudah melalui browser. Berarti, saya dapat mengoperasikan proxmox melalui HP atau tablet. Konon katanya, proxmox juga ada mobile appsnya yang bisa diinstall melalui playstore.
 
-> Keren parah!! Yaudah kita pakai proxmox aja.
+    > Keren parah!! Yaudah kita pakai proxmox aja.
 
 
 ## Penutup
