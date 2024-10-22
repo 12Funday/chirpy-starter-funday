@@ -2,7 +2,7 @@
 title: Membangun Homelab Server part 1
 date: 2024-10-18 15:00:03 +0800
 categories: [homelab]
-tags: [homelab, server, proxmox]     # TAG names should always be lowercase
+tags: [homelab, server, proxmox]
 author: 12funday
 ---
 
@@ -19,11 +19,11 @@ Pada tulisan ini, saya akan menceritakan bagaimana saya membangun *Homelab serve
 
 Adapun perangkat keras yang saya gunakan untuk membangun *homelab server* sederhana saya adalah sebagai berikut.
 
-1. **HP ThinClient T620 plus (F5A60AA)**
+1. **Komputer bekas (HP ThinClient T620 plus F5A60AA)**
 
     Memilih device yang mumpuni untuk kebutuhan *homelab* ini memakan proses yang lumayan panjang, banyak pertimbangan yang harus saya perhatikan dalam memilih perangkat yang saya gunakan. Salah satu yang paling penting adalah budget *(hehe)*. Dan akhrirnya pilihan saya jatuh pada HP ThinClient T620 plus.
 
-    <img src="/assets/img/tc-1.png" alt="ThinClient T620 Plus" width="200"/>
+    <img src="/images/tc-1.png" alt="ThinClient T620 Plus" width="200"/>
 
     Spesifikasi dari HP ThinClient T620 plus adalah sebagai berikut:
 
@@ -36,7 +36,7 @@ Adapun perangkat keras yang saya gunakan untuk membangun *homelab server* sederh
 
     Namun, untuk menjalankan beberapa *virtual machine* secara bersamaan tidak akan mungkin dengan memory hanya 4GB dan Storage 16GB. Untuk itu, saya melakukan upgrade memory 8GB dan storage menjadi 128GB.
 
-2. **TPLINK TL-WR840N**
+2. **Network Interface (TPLINK TL-WR840N)**
     
     Benar! Apa itu *homelab* tanpa koneksi internet?
     Beruntungnya saya, fasilitas koneksi internet telah disediakan oleh penyedia kost dengan kualitas koneksi yang stabil dan *transfer rate* yang lumayan cepat.
@@ -45,7 +45,7 @@ Adapun perangkat keras yang saya gunakan untuk membangun *homelab server* sederh
 
     Berbagai pertimbangan saya lakukan hingga akhirnya saya memimilih untuk membeli TPLINK TL-WR840N. Selain harganya yang terjangkau, device ini juga memiliki 4 mode penggunaan yaitu *Router mode, Access Point mode, Range extender mode,* dan *WISP mode*. Wah... mungkin kedepan alat ini bisa kita "utak-atik" juga hehe.
 
-    <img src="/assets/img/tplink.png" alt="TPLINK TL-WR840N" width="200"/>
+    <img src="/images/tplink.png" alt="TPLINK TL-WR840N" width="200"/>
 
 
 3. **Video Capture**
@@ -55,7 +55,7 @@ Adapun perangkat keras yang saya gunakan untuk membangun *homelab server* sederh
 
     Lalu, bagaimana saya akan mengoperasikan *homelab* ini nantinya? Setelah riset beberapa hari akhirnya ketemulah solusinya, *video capture card*. Alat ini biasanya digunakan oleh para streamer untuk menampilkan output video dari source yang berbeda seperti PS3, PS4, dll. Wah.. Keren banget, pasti harganya mahal? Oh tidak juga, ternyata ada yang menjualnya dengan harga di bawah Rp. 100 ribu.
 
-    <img src="/assets/img/vccard.png" alt="Video Capture Card" width="200"/>
+    <img src="/images/vccard.png" alt="Video Capture Card" width="200"/>
 
 
 ## Operating System
@@ -66,13 +66,13 @@ Ada beberapa pilihan sistem operasi yang menjadi pertimbangan saya dalam membanu
 
 1. **OS dengan Dekstop Environment**
 
-    <img src="/assets/img/linux-1.png" alt="linux" width="200"/>
+    <img src="/images/linux-1.png" alt="linux" width="200"/>
 
     Menggunakan dekstop environment berbasis linux ataupun windows tentunya akan sangat memudahkan dalam pengoperasian *homelab* ini nanti. Pada dekstop kita gunakan virtualbox untuk menginstal beberapa *virtual machine*. Namun, menggunakan *dekstop environment* saya kira akan sangat boros resorce nantinya. Dalam keadaan *idle* pun penggunaan CPU dan Memory mesin dengan *desktop environment* lumayan gede.
 
 2. **Casa OS**
 
-    <img src="/assets/img/casa-1.png" alt="casa OS" width="200"/>
+    <img src="/images/casa-1.png" alt="casa OS" width="200"/>
 
     Casa OS sangat populer digunakan sebagai sistem operasi dalam pembuatan *homelab server* karena pengoperasiaannya sangat mudah, cukup buka browser dan klik klik klik. Namun, kemudahan yang ditawarkan ini sangat berseberangan dengan semangat "utak-atik" yang saya miliki *(hehe)*
 
@@ -80,7 +80,7 @@ Ada beberapa pilihan sistem operasi yang menjadi pertimbangan saya dalam membanu
 
     Virtualization adalah teknologi yang mampu membuat satu komputer atau server menjalankan beberapa sistem operasi secara berasamaan menggunakan satu mesin fisik yang sama. Salah satu platform yang digunakan untuk virtualization adalah **Proxmox Virtual Environment**
 
-    <img src="/assets/img/proxmox-1.png" alt="Proxmox Virtual Environment" width="200"/>
+    <img src="/images/proxmox-1.png" alt="Proxmox Virtual Environment" width="200"/>
 
     **Proxmox** dapat melakukan 2 jenis *virtualization* yaitu *Kernel Based Virtualization* dan *Container-based virtualization*. Proxmox dilengkapi dengan *web-based management interface* sehingga dalam pengoperasiannya bisa sangat mudah melalui browser. Berarti, saya dapat mengoperasikan proxmox melalui HP atau tablet. Konon katanya, proxmox juga ada mobile appsnya yang bisa diinstall melalui playstore.
 
