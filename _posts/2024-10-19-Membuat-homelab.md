@@ -1,5 +1,5 @@
 ---
-title: Membangun Homelab Server part 1
+title: Membangun Homelab Server
 date: 2024-10-18 15:00:03 +0800
 categories: [homelab]
 tags: [homelab, server, proxmox]
@@ -89,4 +89,4 @@ Ada beberapa pilihan sistem operasi yang menjadi pertimbangan saya dalam membanu
 
 ## Penutup
 
-Sekian tulisan hari ini, untuk proses setup dan installasi, akan saya ceritakan di part 2.
+Sekian tulisan hari ini, untuk proses setup dan installasi, akan saya ceritakan nanti.
